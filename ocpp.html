@@ -1,3 +1,105 @@
-<!doctype html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Connect to OCPP | EV Revival</title><link rel="stylesheet" href="style.css"><link rel="manifest" href="manifest.webmanifest"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a><nav class="desktop-nav"><a href="index.html">Home</a><a href="charger-online.html">Get Online</a><a aria-current="page" href="ocpp.html">OCPP</a><a href="error-help.html">Error Help</a><a href="faqs.html">FAQs</a></nav><button class="menu-btn" data-menu-open>Menu</button></div></header><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="drawer-panel"><button class="menu-btn" data-menu-close>Close</button><div class="drawer-links"><a href="index.html">Home</a><a href="charger-online.html">Get Online</a><a href="ocpp.html">OCPP</a><a href="error-help.html">Error Help</a><a href="faqs.html">FAQs</a><a href="pricing.html">Pricing</a></div></div></div>
-<main class="section"><div class="container"><h1>Connect to OCPP</h1><p class="section-intro">OCPP is a standard way for chargers to talk to a backend platform. You may need this so your charger can report status and receive commands.</p><div class="card"><ol class="list-clean"><li>Log in to your charger settings.</li><li>Find backend/OCPP settings in the menu.</li><li>Enter the OCPP URL from your backend provider.</li><li>Save or apply changes.</li><li>Reboot/restart the charger if needed.</li><li>Check charger online status from your platform.</li></ol></div><p class="notice">Exact menus may vary by charger firmware.</p><p class="notice strong">A charger may still fail to connect if the home network, Wi-Fi, firmware, DNS, routing, or backend details are incorrect.</p></div></main>
-<footer><div class="container"><div class="footer-links"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="pricing.html">Pricing</a><a href="login.html">Login</a><a href="billing.html">Billing</a></div><small>Vestel EV chargers only.</small></div></footer><button class="back-to-top" data-back-top>↑</button><script src="script.js" defer></script></body></html>
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect to OCPP | EV Revival</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="charger-online.html">Get Online</a>
+      <a aria-current="page" href="ocpp.html">OCPP</a>
+      <a href="error-help.html">Error Help</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+    <button class="menu-btn" data-menu-open>Menu</button>
+  </div>
+</header>
+
+<div class="mobile-drawer" data-drawer aria-hidden="true">
+  <div class="drawer-panel">
+    <button class="menu-btn" data-menu-close>Close</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="charger-online.html">Get Online</a>
+      <a href="ocpp.html">OCPP</a>
+      <a href="error-help.html">Error Help</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container">
+    <h1>Connect to OCPP</h1>
+    <p class="section-intro">Once your charger is connected to Wi-Fi, you can connect it to EV Revival using the charger’s OCPP settings. This allows the charger to report status, receive commands, and use supported EV Revival features.</p>
+
+    <section class="section">
+      <h2>Before you start</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>Your Vestel charger must already be connected to Wi-Fi.</li>
+          <li>You need your charger ID / CBID from the side label.</li>
+          <li>You need access to the charger web interface login.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Set up OCPP for EV Revival</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Log in to the charger web interface using the same login steps shown on the <strong>Get Online</strong> page.</li>
+          <li>Open the charger menu.</li>
+          <li>Find and open the <span class="code-pill">OCPP</span> tab.</li>
+          <li>Find <span class="code-pill">Central System Address</span>.</li>
+          <li>Enter the EV Revival OCPP address in this format: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
+          <li>Replace <span class="code-pill">CBID</span> with your charger’s actual charger ID.</li>
+          <li>Press <strong>Save</strong>.</li>
+          <li>Restart the charger if required.</li>
+          <li>Allow a few minutes for the charger to connect.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Example</h2>
+      <div class="card">
+        <p><span class="strong">Example charger ID:</span> <span class="code-pill">EU_EDR_CB12001234</span></p>
+        <p><span class="strong">Example full address:</span></p>
+        <div class="copy-row">
+          <span class="code-pill">wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234</span>
+          <button class="copy-btn" data-copy="wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234">Copy Address</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="notice"><span class="strong">Important:</span> The charger ID must match exactly. If the address is wrong, the charger will not connect. The charger also needs working Wi-Fi/internet access before OCPP can work.</p>
+    <p class="notice strong">If the charger does not connect, check the charger ID, Wi-Fi connection, and OCPP address carefully. A charger may fail to connect if the Wi-Fi, internet connection, firmware, DNS, routing, or backend address is incorrect.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="login.html">Login</a>
+      <a href="billing.html">Billing</a>
+    </div>
+    <small>Vestel EV chargers only.</small>
+  </div>
+</footer>
+
+<button class="back-to-top" data-back-top>↑</button>
+<script src="script.js" defer></script>
+</body>
+</html>
