@@ -39,39 +39,69 @@
 <main class="section">
   <div class="container">
     <h1>Connect Your Vestel Charger to EV Revival (OCPP)</h1>
-    <p class="section-intro">This page is for EV Revival customers using Vestel chargers. First connect your charger to Wi-Fi on the <strong>Get Online</strong> page. Then follow the steps below to add the EV Revival OCPP address.</p>
+    <p class="section-intro">Once your charger is on Wi-Fi, this takes only a few minutes. Follow these steps in order and you should be connected successfully.</p>
 
     <section class="section">
       <h2>Before you start</h2>
       <div class="card">
         <ul class="list-clean">
-          <li>Your charger must already be connected to Wi-Fi first.</li>
-          <li>You will log in using the same hotspot and login process as the <strong>Get Online</strong> page.</li>
           <li>Have your charger CBID ready from the side label.</li>
+          <li>Make sure the charger has already been set up on home Wi-Fi.</li>
+          <li>If needed, use the <strong>Get Online</strong> page first, then return here.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Set OCPP for EV Revival</h2>
+      <h2>Step 1: Log in using the same charger page steps as Get Online</h2>
       <div class="card">
         <ol class="list-clean">
-          <li>Log in to your charger web page using the same steps you used for Wi-Fi setup.</li>
-          <li>Open the menu.</li>
-          <li>Select <strong>OCPP</strong>.</li>
-          <li>Find <strong>Central System Address</strong>.</li>
-          <li>Enter: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
-          <li>Replace <strong>CBID</strong> with your own charger ID.</li>
-          <li>Press <strong>Save</strong> on the OCPP page.</li>
+          <li>Power-cycle the charger at the supply and wait until blue/green flashing stops.</li>
+          <li>Connect your device to the charger hotspot (network starts with <strong>700</strong>) using your <strong>CBID</strong> password.</li>
+          <li>If your device says <strong>Connected without internet</strong>, stay connected.</li>
+          <li>Open the correct charger login page and sign in (HS: <strong>192.168.35.1</strong>, non-HS: <strong>192.168.1.1</strong>).</li>
+          <li>If the page does not open, reconnect to the charger hotspot and try again.</li>
         </ol>
       </div>
     </section>
 
     <section class="section">
-      <h2>Important warning</h2>
+      <h2>Step 2: Go to the OCPP tab</h2>
       <div class="card">
-        <p class="notice"><span class="strong">Do not press Save again on the Main Page after saving OCPP.</span></p>
-        <p>Saving again on the Main Page can set the Central System Address back to the charger default and break EV Revival connection.</p>
+        <ol class="list-clean">
+          <li>In the charger web UI, open the menu.</li>
+          <li>Select <strong>OCPP</strong>.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 3: Update Central System Address</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Find <strong>Central System Address</strong>.</li>
+          <li>Enter: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
+          <li>Replace <strong>CBID</strong> with your own charger ID.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 4: Save correctly</h2>
+      <div class="card">
+        <p class="notice"><span class="strong">After changing Central System Address, press Save on the OCPP page only.</span></p>
+        <p class="notice"><span class="strong">Do not press Save again on the Main Page, because this may revert the address to default.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>After saving</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>Give the charger a few minutes to reconnect.</li>
+          <li>If connection fails, check CBID spelling in the address and save again on the OCPP page only.</li>
+          <li>If needed, repeat from Step 1 and make sure your device stayed connected to the charger hotspot during login.</li>
+        </ul>
       </div>
     </section>
 
@@ -86,8 +116,6 @@
         </div>
       </div>
     </section>
-
-    <p class="notice">If it does not connect first time, stay calm. Check CBID spelling carefully, confirm Wi-Fi is still working, and make sure the address is exactly correct.</p>
   </div>
 </main>
 
