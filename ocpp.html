@@ -38,42 +38,48 @@
 
 <main class="section">
   <div class="container">
-    <h1>Connect to OCPP</h1>
-    <p class="section-intro">Once your charger is connected to Wi-Fi, you can connect it to EV Revival using the charger’s OCPP settings. This allows the charger to report status, receive commands, and use supported EV Revival features.</p>
+    <h1>Connect Your Vestel Charger to EV Revival (OCPP)</h1>
+    <p class="section-intro">This page is for EV Revival customers using Vestel chargers. First connect your charger to Wi-Fi on the <strong>Get Online</strong> page. Then follow the steps below to add the EV Revival OCPP address.</p>
 
     <section class="section">
       <h2>Before you start</h2>
       <div class="card">
         <ul class="list-clean">
-          <li>Your Vestel charger must already be connected to Wi-Fi.</li>
-          <li>You need your charger ID / CBID from the side label.</li>
-          <li>You need access to the charger web interface login.</li>
+          <li>Your charger must already be connected to Wi-Fi first.</li>
+          <li>You will log in using the same hotspot and login process as the <strong>Get Online</strong> page.</li>
+          <li>Have your charger CBID ready from the side label.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Set up OCPP for EV Revival</h2>
+      <h2>Set OCPP for EV Revival</h2>
       <div class="card">
         <ol class="list-clean">
-          <li>Log in to the charger web interface using the same login steps shown on the <strong>Get Online</strong> page.</li>
-          <li>Open the charger menu.</li>
-          <li>Find and open the <span class="code-pill">OCPP</span> tab.</li>
-          <li>Find <span class="code-pill">Central System Address</span>.</li>
-          <li>Enter the EV Revival OCPP address in this format: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
-          <li>Replace <span class="code-pill">CBID</span> with your charger’s actual charger ID.</li>
-          <li>Press <strong>Save</strong>.</li>
-          <li>Restart the charger if required.</li>
-          <li>Allow a few minutes for the charger to connect.</li>
+          <li>Log in to your charger web page using the same steps you used for Wi-Fi setup.</li>
+          <li>Open the menu.</li>
+          <li>Select <strong>OCPP</strong>.</li>
+          <li>Find <strong>Central System Address</strong>.</li>
+          <li>Enter: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
+          <li>Replace <strong>CBID</strong> with your own charger ID.</li>
+          <li>Press <strong>Save</strong> on the OCPP page.</li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Important warning</h2>
+      <div class="card">
+        <p class="notice"><span class="strong">Do not press Save again on the Main Page after saving OCPP.</span></p>
+        <p>Saving again on the Main Page can set the Central System Address back to the charger default and break EV Revival connection.</p>
       </div>
     </section>
 
     <section class="section">
       <h2>Example</h2>
       <div class="card">
-        <p><span class="strong">Example charger ID:</span> <span class="code-pill">EU_EDR_CB12001234</span></p>
-        <p><span class="strong">Example full address:</span></p>
+        <p><span class="strong">Example CBID:</span> <span class="code-pill">EU_EDR_CB12001234</span></p>
+        <p><span class="strong">Example full Central System Address:</span></p>
         <div class="copy-row">
           <span class="code-pill">wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234</span>
           <button class="copy-btn" data-copy="wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234">Copy Address</button>
@@ -81,8 +87,7 @@
       </div>
     </section>
 
-    <p class="notice"><span class="strong">Important:</span> The charger ID must match exactly. If the address is wrong, the charger will not connect. The charger also needs working Wi-Fi/internet access before OCPP can work.</p>
-    <p class="notice strong">If the charger does not connect, check the charger ID, Wi-Fi connection, and OCPP address carefully. A charger may fail to connect if the Wi-Fi, internet connection, firmware, DNS, routing, or backend address is incorrect.</p>
+    <p class="notice">If it does not connect first time, stay calm. Check CBID spelling carefully, confirm Wi-Fi is still working, and make sure the address is exactly correct.</p>
   </div>
 </main>
 
