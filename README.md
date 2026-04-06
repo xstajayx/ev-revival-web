@@ -7,7 +7,7 @@ A production-ready, mobile-first static support website for **Vestel EV chargers
 - Mobile-friendly navigation and layout.
 - Support guides for getting charger online and OCPP setup.
 - Error light troubleshooting and FAQ accordions.
-- Pricing page (`£3/month`, `30 days free`).
+- Pricing page (`£3.99/month`, `14 days free`) with trial/subscription clarity.
 - Placeholder Login and Billing pages (non-functional, future release).
 - Basic installable web app setup with `manifest.webmanifest` + `sw.js` + `offline.html`.
 
@@ -20,7 +20,12 @@ A production-ready, mobile-first static support website for **Vestel EV chargers
 - `faqs.html` — FAQ accordions
 - `pricing.html` — pricing details
 - `about.html` — first-person story
-- `terms.html` — terms of service
+- `terms.html` — terms of use
+- `privacy.html` — privacy policy draft
+- `cookies.html` — cookie policy draft
+- `refunds.html` — refund and cancellation policy draft
+- `subscription-terms.html` — trial and subscription terms draft
+- `support.html` — contact and support page
 - `login.html` — placeholder login
 - `billing.html` — placeholder billing portal
 - `app.html` — add-to-home-screen instructions
