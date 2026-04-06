@@ -42,36 +42,52 @@
 <main class="section">
   <div class="container">
     <h1>Get Your Charger Online</h1>
-    <p class="section-intro">Check your charger model first. HS chargers have <strong>“HS”</strong> in the model number shown on the side label.</p>
+    <p class="section-intro">You are not alone if this feels tricky. Many phones and tablets drop the charger hotspot during setup. Follow this guide step by step and keep reconnecting to the charger hotspot whenever your device switches away.</p>
 
     <section class="section">
-      <h2>Before You Begin</h2>
+      <h2>Before you start</h2>
       <div class="card">
         <ul class="list-clean">
-          <li>Power the charger off, then back on. This reopens the charger's Wi-Fi hotspot.</li>
-          <li>The hotspot may only stay available for around 15 minutes after power-up.</li>
-          <li>Wait until the green and blue lights stop flashing before searching for the hotspot (this can take up to 2 minutes).</li>
-          <li>Connect to the charger's Wi-Fi hotspot using the charger serial number / CB-ID shown on the side label.</li>
-          <li>If your phone says <strong>Connected without internet</strong> or shows a mobile data warning, continue anyway.</li>
-          <li>On some Android phones, turn off mobile data and Bluetooth temporarily if the hotspot does not open correctly.</li>
-          <li>If the charger page opens in German, use the language dropdown at the top-right to switch language.</li>
+          <li>Have your home Wi-Fi name (SSID) and Wi-Fi password ready before you begin.</li>
+          <li>Type your Wi-Fi password exactly as shown. It is case sensitive (capital and lowercase letters must match).</li>
+          <li>Keep this page open on a second device if possible, so you can follow each step.</li>
+          <li>Check your charger side label now. You will need the charger serial number and CBID.</li>
+          <li>The CBID is usually in this style: <span class="code-pill">EU_EDR_CB12...</span></li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Typical Vestel web interface steps</h2>
+      <h2>Open the charger hotspot (very important)</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Turn the charger <strong>off</strong> at the power supply, then turn it back <strong>on</strong>.</li>
+          <li>Wait for startup to finish. The green and blue flashing lights must stop first (this can take up to 2 minutes).</li>
+          <li>On your phone or tablet, open <strong>Wi-Fi settings</strong>.</li>
+          <li>Find a Wi-Fi network that starts with <strong>700</strong> (this is your charger S/N).</li>
+          <li>Connect to that network.</li>
+          <li>When asked for a password, enter your charger <strong>CBID</strong> from the side label.</li>
+          <li>If your device says <strong>No Internet</strong> or <strong>Connected without internet</strong>, stay connected anyway.</li>
+          <li>You may see a Wi-Fi icon with an exclamation mark while connected to the charger hotspot. This is normal during setup.</li>
+          <li>Modern phones often jump back to mobile data or home Wi-Fi automatically. Keep checking Wi-Fi settings and reconnect to the charger hotspot whenever this happens.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>WLAN setup steps (inside charger page)</h2>
       <div class="card">
         <ol class="list-clean">
           <li>Open the top-left menu.</li>
           <li>Select <strong>Network Interface</strong>.</li>
           <li>Select <strong>WLAN</strong> on the left.</li>
           <li>Set <strong>WLAN</strong> to <strong>Enabled</strong>.</li>
-          <li>Enter your home Wi-Fi name (SSID) and password exactly (password is case sensitive).</li>
+          <li>Enter your home Wi-Fi name (SSID).</li>
+          <li>Enter your home Wi-Fi password exactly as shown (case sensitive).</li>
           <li>Set <strong>Security</strong> to <strong>WPA/WPA2 PSK</strong>.</li>
           <li>Set <strong>IP Settings</strong> to <strong>DHCP</strong>.</li>
           <li>Press <strong>Save</strong>.</li>
-          <li>Return to <strong>Main Page</strong>.</li>
+          <li>Go to <strong>Main Page</strong>.</li>
           <li>Set <strong>Pre-Sets</strong> to <strong>WLAN</strong>, then press <strong>Save</strong> again.</li>
         </ol>
       </div>
@@ -88,16 +104,17 @@
         <p><strong>Username:</strong> admin</p>
         <p><strong>Password:</strong> printed in your supplied booklet (charger-specific). Example only: <span class="code-pill">F4De*5/gf</span>. Do not assume the example password will work on your charger.</p>
         <ol class="list-clean">
-          <li>Identify HS model from the side label.</li>
-          <li>Connect your phone/laptop to the charger's Wi-Fi hotspot shown by the charger serial number / CB-ID.</li>
-          <li>If you see a <strong>no internet</strong> warning, stay connected and continue.</li>
-          <li>Open your browser and go to 192.168.35.1.</li>
+          <li>Check the side label and confirm your model includes <strong>HS</strong>.</li>
+          <li>Connect your phone/tablet/laptop to the charger hotspot (network starts with <strong>700</strong>).</li>
+          <li>If your device warns <strong>no internet</strong>, ignore the warning and stay on the charger hotspot.</li>
+          <li>Open your browser and go to <strong>192.168.35.1</strong>.</li>
+          <li>If the page will not load, first confirm you are still connected to the charger hotspot. Reconnect if needed.</li>
           <li>Log in with username <strong>admin</strong> and your own booklet password.</li>
-          <li>Open menu → <strong>Network Interface</strong> → <strong>WLAN</strong> and set WLAN to <strong>Enabled</strong>.</li>
+          <li>Open menu → <strong>Network Interface</strong> → <strong>WLAN</strong>, and set WLAN to <strong>Enabled</strong>.</li>
           <li>Enter your home SSID and password exactly (password is case sensitive).</li>
           <li>Set <strong>Security = WPA/WPA2 PSK</strong> and <strong>IP Settings = DHCP</strong>, then press <strong>Save</strong>.</li>
           <li>Go to <strong>Main Page</strong> → set <strong>Pre-Sets = WLAN</strong> → press <strong>Save</strong> again.</li>
-          <li>If the page does not load, disconnect mobile data/VPN and reconnect to the charger hotspot.</li>
+          <li>If your phone keeps switching networks, disable auto-join for other Wi-Fi networks temporarily and reconnect to the charger hotspot.</li>
         </ol>
       </section>
 
@@ -110,40 +127,40 @@
         </div>
         <p><strong>E.ON non-HS login:</strong> username <span class="code-pill">admin</span> / password <span class="code-pill">eon01</span>.</p>
         <ol class="list-clean">
-          <li>Confirm the side label shows a non-HS model.</li>
-          <li>Connect to the charger's Wi-Fi hotspot shown by the charger serial number / CB-ID.</li>
-          <li>If your phone says <strong>Connected without internet</strong>, continue anyway.</li>
-          <li>Open browser and go to 192.168.1.1.</li>
+          <li>Check the side label and confirm your model does <strong>not</strong> include HS.</li>
+          <li>Connect to the charger hotspot (network starts with <strong>700</strong>).</li>
+          <li>If your phone says <strong>Connected without internet</strong>, stay connected and continue.</li>
+          <li>Open browser and go to <strong>192.168.1.1</strong>.</li>
+          <li>If the login page does not appear, your phone likely switched away. Reconnect to the charger hotspot and try again.</li>
           <li>Log in with the correct non-HS credentials.</li>
-          <li>Open menu → <strong>Network Interface</strong> → <strong>WLAN</strong> and set WLAN to <strong>Enabled</strong>.</li>
+          <li>Open menu → <strong>Network Interface</strong> → <strong>WLAN</strong>, and set WLAN to <strong>Enabled</strong>.</li>
           <li>Enter your home SSID and password exactly (password is case sensitive).</li>
           <li>Set <strong>Security = WPA/WPA2 PSK</strong> and <strong>IP Settings = DHCP</strong>, then press <strong>Save</strong>.</li>
           <li>Go to <strong>Main Page</strong> → set <strong>Pre-Sets = WLAN</strong> → press <strong>Save</strong> again.</li>
-          <li>If your phone keeps switching networks, temporarily disable auto-join for other Wi-Fi networks and retry.</li>
+          <li>If your phone keeps switching networks, temporarily disable mobile data and auto-join to other Wi-Fi, then reconnect to the charger hotspot.</li>
         </ol>
       </section>
     </div>
 
     <section class="section">
-      <h2>After Saving</h2>
+      <h2>After saving</h2>
       <div class="card">
         <ul class="list-clean">
           <li>Allow up to 15 minutes for the charger to appear online.</li>
           <li>When finished, close your browser and disconnect from the charger hotspot.</li>
-          <li>If the charger still does not come online, restart both the charger and your router, then try again.</li>
+          <li>If it still does not come online, restart both the charger and your router, then repeat the steps.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Connectivity Tips</h2>
+      <h2>Connectivity tips</h2>
       <div class="card">
         <ul class="list-clean">
-          <li>The charger relies on your own home Wi-Fi/network.</li>
-          <li>If the charger disconnects, commands/signals may fail.</li>
-          <li>This is outside the control of EV Revival.</li>
-          <li>If signal is weak, try a Wi-Fi extender or powerline adapter.</li>
-          <li>Walls, distance, garages, and weak-signal areas can all affect reliability.</li>
+          <li>The charger needs a stable home Wi-Fi connection.</li>
+          <li>Weak signal can cause dropouts and failed updates.</li>
+          <li>Garages, walls, and long distance from the router can reduce signal strength.</li>
+          <li>If needed, use a Wi-Fi extender or powerline adapter to improve coverage.</li>
         </ul>
       </div>
     </section>
