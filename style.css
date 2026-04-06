@@ -25,6 +25,8 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+/* Temporarily hide links to the live app during maintenance updates. */
+a[href="https://evrevival.jworldcreations.com"] { display: none !important; }
 img { max-width: 100%; display: block; }
 
 .container {
