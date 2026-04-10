@@ -1,4 +1,29 @@
 (() => {
+  const pageName = window.location.pathname.split('/').pop() || 'index.html';
+  const sharedNavLinks = [
+    { href: 'index.html', label: 'Home' },
+    { href: 'features.html', label: 'Features' },
+    { href: 'pricing.html', label: 'Pricing' },
+    { href: 'charger-online.html', label: 'Get Online' },
+    { href: 'ocpp.html', label: 'OCPP' },
+    { href: 'error-help.html', label: 'Error Help' },
+    { href: 'faqs.html', label: 'FAQs' },
+    { href: 'support.html', label: 'Support' },
+    { href: 'terms.html', label: 'Terms' },
+    { href: 'privacy.html', label: 'Privacy' }
+  ];
+
+  const buildNavMarkup = () => sharedNavLinks.map((link) => {
+    const current = pageName === link.href ? ' aria-current=\"page\"' : '';
+    return `<a href=\"${link.href}\"${current}>${link.label}</a>`;
+  }).join('');
+
+  const desktopNav = document.querySelector('.desktop-nav');
+  if (desktopNav) desktopNav.innerHTML = buildNavMarkup();
+
+  const drawerLinks = document.querySelector('.drawer-links');
+  if (drawerLinks) drawerLinks.innerHTML = buildNavMarkup();
+
   const drawer = document.querySelector('[data-drawer]');
   const menuBtn = document.querySelector('[data-menu-open]');
   const closeBtn = document.querySelector('[data-menu-close]');
