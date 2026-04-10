@@ -1,8 +1,95 @@
-<!doctype html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Error Lights & Help | EV Revival</title><link rel="stylesheet" href="style.css"><link rel="manifest" href="manifest.webmanifest"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a><nav class="desktop-nav"><a href="index.html">Home</a><a href="charger-online.html">Get Online</a><a href="ocpp.html">OCPP</a><a aria-current="page" href="error-help.html">Error Help</a><a href="faqs.html">FAQs</a></nav><button class="menu-btn" data-menu-open>Menu</button></div></header><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="drawer-panel"><button class="menu-btn" data-menu-close>Close</button><div class="drawer-links"><a href="index.html">Home</a><a href="charger-online.html">Get Online</a><a href="ocpp.html">OCPP</a><a href="error-help.html">Error Help</a><a href="faqs.html">FAQs</a></div></div></div>
-<main class="section"><div class="container"><h1>Error Lights & Error Help</h1><p class="section-intro">Use these quick checks first. If a fault remains, contact an EV specialist.</p><div class="grid cards">
-<article class="card status-red"><h3>Red light</h3><p>Usually shows a fault, protection stop, or a failed session.</p><ul class="list-clean"><li>Unplug charging cable.</li><li>Fully stop session and wait.</li><li>Power cycle charger.</li><li>Retry once and check network.</li><li>Escalate to EV specialist if still red.</li></ul></article>
-<article class="card status-yellow"><h3>Yellow light</h3><p>Often indicates waiting/attention state.</p><ul class="list-clean"><li>Check if vehicle is requesting charge.</li><li>Unplug and reconnect cable.</li><li>Wait and retry session.</li><li>Confirm online/Wi-Fi status.</li></ul></article>
-<article class="card status-blue"><h3>Blue light</h3><p>Often means standby/ready or communication state.</p><ul class="list-clean"><li>Start a fresh charging session.</li><li>Check schedule settings and current time.</li><li>Verify backend/OCPP connection if used.</li></ul></article>
-<article class="card status-neutral"><h3>No light / no response</h3><p>Could be no power or hardware issue.</p><ul class="list-clean"><li>Check breaker and power supply.</li><li>Turn charger off/on safely.</li><li>Check cable and connectors.</li><li>If still no response, seek installer/specialist support.</li></ul></article>
-</div><section class="section"><h2>Error Codes</h2><p class="card">Exact codes vary by model and firmware. Common first actions: unplug cable, power cycle charger, retry session, check connection, then seek EV specialist support if fault remains.</p></section></div></main>
-<footer><div class="container"><div class="footer-links"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="pricing.html">Pricing</a><a href="login.html">Login</a><a href="billing.html">Billing</a></div><small>Vestel EV chargers only.</small></div></footer><button class="back-to-top" data-back-top>↑</button><script src="script.js" defer></script></body></html>
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error Lights & Help | EV Revival</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="charger-online.html">Get Online</a>
+      <a href="ocpp.html">OCPP</a>
+      <a aria-current="page" href="error-help.html">Error Help</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+    <button class="menu-btn" data-menu-open>Menu</button>
+  </div>
+</header>
+<div class="mobile-drawer" data-drawer aria-hidden="true"><div class="drawer-panel"><button class="menu-btn" data-menu-close>Close</button><div class="drawer-links"><a href="index.html">Home</a><a href="charger-online.html">Get Online</a><a href="ocpp.html">OCPP</a><a href="error-help.html">Error Help</a><a href="faqs.html">FAQs</a></div></div></div>
+
+<main class="section">
+  <div class="container">
+    <h1>Error Lights & Error Help</h1>
+    <p class="section-intro">Use these quick checks first. If a fault remains, contact an EV specialist.</p>
+
+    <div class="grid cards">
+      <article class="card status-red"><h3>Red light</h3><p>Usually shows a fault, protection stop, or a failed session.</p><ul class="list-clean"><li>Unplug charging cable.</li><li>Fully stop session and wait.</li><li>Power cycle charger.</li><li>Retry once and check network.</li><li>Escalate to EV specialist if still red.</li></ul></article>
+
+      <article class="card status-yellow">
+        <h3>Yellow light</h3>
+        <p>The yellow light is typically seen on an HS version.</p>
+        <p><strong>Yellow flashing / blinking light:</strong><br>This usually means the tamper switch has been triggered and the charger door is open.</p>
+        <p><strong>Solid yellow light:</strong><br>This can sometimes be linked to firmware or communication behaviour.</p>
+        <p><strong>Unofficial resolution based on personal experience:</strong><br>Connecting the Vestel EV charger to a TP-Link extender has helped in some cases.</p>
+        <p>A simple test is to switch off your Wi-Fi router while the charger is showing a solid yellow light. If the yellow light disappears, this may point to a communication issue rather than a hardware fault.</p>
+        <p>In my experience, a TP-Link extender often helps resolve this type of issue: <a href="https://amzn.to/4cd8Gi5" target="_blank" rel="noopener noreferrer">https://amzn.to/4cd8Gi5</a></p>
+        <p class="muted"><strong>Disclaimer:</strong> This suggestion is based on my own experience and may vary depending on charger firmware, setup, and site conditions.</p>
+      </article>
+
+      <article class="card status-blue"><h3>Blue light</h3><p>Often means standby/ready or communication state.</p><ul class="list-clean"><li>Start a fresh charging session.</li><li>Check schedule settings and current time.</li><li>Verify backend/OCPP connection if used.</li></ul></article>
+      <article class="card status-neutral"><h3>No light / no response</h3><p>Could be no power or hardware issue.</p><ul class="list-clean"><li>Check breaker and power supply.</li><li>Turn charger off/on safely.</li><li>Check cable and connectors.</li><li>If still no response, seek installer/specialist support.</li></ul></article>
+    </div>
+
+    <section class="section">
+      <h2>Vestel error codes</h2>
+      <p class="section-intro">Error code behaviour may vary slightly by charger model and firmware version. Use this list as a practical reference and confirm against your charger display.</p>
+      <div class="table-wrap card">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>Error</th>
+              <th>OCPP Vendor Error Code</th>
+              <th>Display</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Error">0 — Contactor welded</td><td data-label="OCPP Vendor Error Code">ContactorWelded</td><td data-label="Display">ERR-0</td></tr>
+            <tr><td data-label="Error">1 — Contactor does not respond</td><td data-label="OCPP Vendor Error Code">ContactorNotResponse</td><td data-label="Display">ERR-1</td></tr>
+            <tr><td data-label="Error">4 — Proximity pilot error</td><td data-label="OCPP Vendor Error Code">ProximityPilot</td><td data-label="Display">ERR-4</td></tr>
+            <tr><td data-label="Error">5 — CP diode error</td><td data-label="OCPP Vendor Error Code">ControlPilotDiode</td><td data-label="Display">ERR-5</td></tr>
+            <tr><td data-label="Error">6 — CP short error</td><td data-label="OCPP Vendor Error Code">ControlPilotShort</td><td data-label="Display">ERR-6</td></tr>
+            <tr><td data-label="Error">7 — Over voltage phase 1</td><td data-label="OCPP Vendor Error Code">OverVoltage</td><td data-label="Display">ERR-7</td></tr>
+            <tr><td data-label="Error">8 — Over voltage phase 2</td><td data-label="OCPP Vendor Error Code">OverVoltage</td><td data-label="Display">ERR-8</td></tr>
+            <tr><td data-label="Error">9 — Over voltage phase 3</td><td data-label="OCPP Vendor Error Code">OverVoltage</td><td data-label="Display">ERR-9</td></tr>
+            <tr><td data-label="Error">10 — Under voltage phase 1</td><td data-label="OCPP Vendor Error Code">UnderVoltage</td><td data-label="Display">ERR-10</td></tr>
+            <tr><td data-label="Error">11 — Under voltage phase 2</td><td data-label="OCPP Vendor Error Code">UnderVoltage</td><td data-label="Display">ERR-11</td></tr>
+            <tr><td data-label="Error">12 — Under voltage phase 3</td><td data-label="OCPP Vendor Error Code">UnderVoltage</td><td data-label="Display">ERR-12</td></tr>
+            <tr><td data-label="Error">16 — Residual current error</td><td data-label="OCPP Vendor Error Code">ResidualCurrent</td><td data-label="Display">ERR-16</td></tr>
+            <tr><td data-label="Error">17 — Protective Earth Fault</td><td data-label="OCPP Vendor Error Code">ProtectiveEarth</td><td data-label="Display">ERR-17</td></tr>
+            <tr><td data-label="Error">18–24 — RFID reader error</td><td data-label="OCPP Vendor Error Code">ReaderFailure</td><td data-label="Display">ERR-18, ERR-24</td></tr>
+            <tr><td data-label="Error">19 — Connector Lock Failure</td><td data-label="OCPP Vendor Error Code">ConnectorLockFailure</td><td data-label="Display">ERR-19, ERR-2, ERR-3</td></tr>
+            <tr><td data-label="Error">20 — Over Current Failure</td><td data-label="OCPP Vendor Error Code">OverCurrentFailure</td><td data-label="Display">ERR-20</td></tr>
+            <tr><td data-label="Error">21–22–23 — Load Balance Communication</td><td data-label="OCPP Vendor Error Code">LoadBalanceComm</td><td data-label="Display">ERR-21, ERR-22, ERR-23</td></tr>
+            <tr><td data-label="Error">25 — Power Meter Failure</td><td data-label="OCPP Vendor Error Code">PowerMeterFailure</td><td data-label="Display">ERR-25</td></tr>
+            <tr><td data-label="Error">26 — RCD Device Error</td><td data-label="OCPP Vendor Error Code">RCDDeviceError</td><td data-label="Display">ERR-26</td></tr>
+            <tr><td data-label="Error">27 — Installation Error</td><td data-label="OCPP Vendor Error Code">InstallationError</td><td data-label="Display">ERR-27</td></tr>
+            <tr><td data-label="Error">28 — PEN Error</td><td data-label="OCPP Vendor Error Code">PENError</td><td data-label="Display">ERR-28</td></tr>
+            <tr><td data-label="Error">29 — Emergency Button Error</td><td data-label="OCPP Vendor Error Code">EmergencyButtonError</td><td data-label="Display">ERR-29</td></tr>
+            <tr><td data-label="Error">30 — Board Communication Error</td><td data-label="OCPP Vendor Error Code">BoardCommError</td><td data-label="Display">ERR-30</td></tr>
+            <tr><td data-label="Error">31 — TIC Communication Error</td><td data-label="OCPP Vendor Error Code">OtherError</td><td data-label="Display">ERR-31</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><div class="container"><div class="footer-links"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="pricing.html">Pricing</a><a href="login.html">Login</a><a href="billing.html">Billing</a></div><small>Vestel EV chargers only.</small></div></footer><button class="back-to-top" data-back-top>↑</button><script src="script.js" defer></script>
+</body>
+</html>
