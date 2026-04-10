@@ -5,7 +5,7 @@
     { href: 'features.html', label: 'Features' },
     { href: 'pricing.html', label: 'Pricing' },
     { href: 'charger-online.html', label: 'Get Online' },
-    { href: 'ocpp.html', label: 'OCPP' },
+    { href: 'ocpp.html', label: 'Connect Your EV Charger' },
     { href: 'error-help.html', label: 'Error Help' },
     { href: 'faqs.html', label: 'FAQs' },
     { href: 'support.html', label: 'Support' },
