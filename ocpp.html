@@ -38,35 +38,57 @@
 
 <main class="section">
   <div class="container">
-    <h1>Connect Your Vestel Charger to EV Revival (OCPP)</h1>
-    <p class="section-intro">Once your charger is on Wi-Fi, this takes only a few minutes. Follow these steps in order and you should be connected successfully.</p>
+    <h1>Connect your Vestel charger to EV Revival (OCPP)</h1>
+    <p class="section-intro">Follow these steps in order to connect your charger. If a step does not load first time, reconnect to the charger hotspot and try again.</p>
+
+    <section class="section">
+      <h2>Why EV Revival exists</h2>
+      <div class="card">
+        <p>EV Revival started as a personal project after seeing how difficult it could be for Vestel charger owners to reconnect chargers, manage schedules, and make sense of faults. Built from real-world experience as both a Vestel user and installer, it was created to offer a simpler, more practical self-service experience for compatible chargers.</p>
+      </div>
+    </section>
 
     <section class="section">
       <h2>Before you start</h2>
       <div class="card">
         <ul class="list-clean">
           <li>Have your charger CBID ready from the side label.</li>
-          <li>Make sure the charger has already been set up on home Wi-Fi.</li>
+          <li>Make sure the charger is already connected to home Wi-Fi.</li>
           <li>If needed, use the <strong>Get Online</strong> page first, then return here.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Step 1: Log in using the same charger page steps as Get Online</h2>
+      <h2>Step 1: Connect to your charger hotspot</h2>
       <div class="card">
         <ol class="list-clean">
           <li>Power-cycle the charger at the supply and wait until blue/green flashing stops.</li>
           <li>Connect your device to the charger hotspot (network starts with <strong>700</strong>) using your <strong>CBID</strong> password.</li>
           <li>If your device says <strong>Connected without internet</strong>, stay connected.</li>
-          <li>Open the correct charger login page and sign in (HS: <strong>192.168.35.1</strong>, non-HS: <strong>192.168.1.1</strong>).</li>
-          <li>If the page does not open, reconnect to the charger hotspot and try again.</li>
         </ol>
       </div>
     </section>
 
     <section class="section">
-      <h2>Step 2: Go to the OCPP tab</h2>
+      <h2>Step 2: Log in to the charger Web UI</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Open the charger login page (HS: <strong>192.168.35.1</strong>, non-HS: <strong>192.168.1.1</strong>).</li>
+          <li>Log in to the charger Web UI page.</li>
+          <li>Login details will be on the booklet you received.</li>
+        </ol>
+        <p class="muted"><strong>For example:</strong></p>
+        <ul class="list-clean">
+          <li><strong>E.ON charger (non-HS)</strong><br>Username: <strong>admin</strong><br>Password: <strong>eon01</strong></li>
+          <li><strong>HS chargers</strong><br>Username: <strong>admin</strong><br>Password: the password will be on the booklet you received during installation.</li>
+        </ul>
+        <p class="notice">Your charger model label will help you know if your charger is HS or not. The model number will include <strong>“HS”</strong> if it is an HS charger.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 3: Go to the OCPP tab</h2>
       <div class="card">
         <ol class="list-clean">
           <li>In the charger web UI, open the menu.</li>
@@ -76,7 +98,7 @@
     </section>
 
     <section class="section">
-      <h2>Step 3: Update Central System Address</h2>
+      <h2>Step 4: Update Central System Address</h2>
       <div class="card">
         <ol class="list-clean">
           <li>Find <strong>Central System Address</strong>.</li>
@@ -87,7 +109,7 @@
     </section>
 
     <section class="section">
-      <h2>Step 4: Save correctly</h2>
+      <h2>Step 5: Save correctly</h2>
       <div class="card">
         <p class="notice"><span class="strong">After changing Central System Address, press Save on the OCPP page only.</span></p>
         <p class="notice"><span class="strong">Do not press Save again on the Main Page, because this may revert the address to default.</span></p>
