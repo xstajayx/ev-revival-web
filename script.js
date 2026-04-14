@@ -19,11 +19,13 @@
     return `<a href=\"${link.href}\"${current}>${link.label}</a>`;
   }).join('');
 
-  const desktopNav = document.querySelector('.desktop-nav');
-  if (desktopNav) desktopNav.innerHTML = buildNavMarkup();
+  document.querySelectorAll('.desktop-nav').forEach((desktopNav) => {
+    desktopNav.innerHTML = buildNavMarkup();
+  });
 
-  const drawerLinks = document.querySelector('.drawer-links');
-  if (drawerLinks) drawerLinks.innerHTML = buildNavMarkup();
+  document.querySelectorAll('.drawer-links').forEach((drawerLinks) => {
+    drawerLinks.innerHTML = buildNavMarkup();
+  });
 
   const drawer = document.querySelector('[data-drawer]');
   const menuBtn = document.querySelector('[data-menu-open]');
