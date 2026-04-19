@@ -102,9 +102,13 @@
       <div class="card">
         <ol class="list-clean">
           <li>Find <strong>Central System Address</strong>.</li>
-          <li>Enter: <span class="code-pill">wss://ocpp.jworldcreations.com/ws/CBID</span></li>
-          <li>Replace <strong>CBID</strong> with your own charger ID.</li>
+          <li>Enter your OCPP address using your charger ID in place of <strong>&lt;CBID&gt;</strong>.</li>
+          <li><span class="strong">Recommended secure address:</span> <span class="code-pill">wss://ocpp.jworldcreations.com/ws/&lt;CBID&gt;</span></li>
+          <li><span class="strong">Legacy fallback address:</span> <span class="code-pill">ws://ocpp-legacy.jworldcreations.com:18080/ws/&lt;CBID&gt;</span></li>
+          <li>Most chargers should use the secure <strong>wss://</strong> address first.</li>
+          <li>If your charger is older or has compatibility limits, use the legacy <strong>ws://</strong> fallback address instead.</li>
         </ol>
+        <p class="notice">Most chargers should use the secure address. Some older or compatibility-limited chargers may require the legacy address instead.</p>
       </div>
     </section>
 
@@ -122,6 +126,7 @@
         <ul class="list-clean">
           <li>Give the charger a few minutes to reconnect.</li>
           <li>If connection fails, check CBID spelling in the address and save again on the OCPP page only.</li>
+          <li>If needed, reboot the charger and let it reconnect.</li>
           <li>If needed, repeat from Step 1 and make sure your device stayed connected to the charger hotspot during login.</li>
         </ul>
       </div>
@@ -130,11 +135,16 @@
     <section class="section">
       <h2>Example</h2>
       <div class="card">
-        <p><span class="strong">Example CBID:</span> <span class="code-pill">EU_EDR_CB12001234</span></p>
-        <p><span class="strong">Example full Central System Address:</span></p>
+        <p><span class="strong">Example charger ID (CBID):</span> <span class="code-pill">EU_EDR_CB12031358</span></p>
+        <p><span class="strong">Secure example:</span></p>
         <div class="copy-row">
-          <span class="code-pill">wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234</span>
-          <button class="copy-btn" data-copy="wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12001234">Copy Address</button>
+          <span class="code-pill">wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12031358</span>
+          <button class="copy-btn" data-copy="wss://ocpp.jworldcreations.com/ws/EU_EDR_CB12031358">Copy Secure Address</button>
+        </div>
+        <p><span class="strong">Legacy fallback example:</span></p>
+        <div class="copy-row">
+          <span class="code-pill">ws://ocpp-legacy.jworldcreations.com:18080/ws/EU_EDR_CB12031358</span>
+          <button class="copy-btn" data-copy="ws://ocpp-legacy.jworldcreations.com:18080/ws/EU_EDR_CB12031358">Copy Legacy Address</button>
         </div>
       </div>
     </section>
