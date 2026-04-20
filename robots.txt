@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ev.jworldcreations.com/sitemap.xml
+Sitemap: https://ev.jworldcreations.com/sitemap.xml
