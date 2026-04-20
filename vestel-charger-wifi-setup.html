@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Connect a Vestel Charger to Wi-Fi (Step-by-Step) | EV Revival</title><meta name="description" content="Follow this step-by-step Vestel charger Wi-Fi setup guide to connect your charger, stay online, and troubleshoot common setup issues.">
+  <link rel="canonical" href="https://ev.jworldcreations.com/vestel-charger-wifi-setup.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a aria-current="page" href="vestel-charger-wifi-setup.html">Get Online</a>
+      <a href="ocpp.html">OCPP</a>
+      <a href="vestel-charger-error-help.html">Error Help</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="vestel-charger-help.html">Help</a>
+    </nav>
+    <button class="menu-btn" data-menu-open>Menu</button>
+  </div>
+</header>
+
+<div class="mobile-drawer" data-drawer aria-hidden="true">
+  <div class="drawer-panel">
+    <button class="menu-btn" data-menu-close>Close</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="vestel-charger-wifi-setup.html">Get Online</a>
+      <a href="ocpp.html">OCPP</a>
+      <a href="vestel-charger-error-help.html">Error Help</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="vestel-charger-help.html">Help</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container">
+    <h1>How to get your Vestel charger online</h1>
+    <p class="section-intro">Use this step-by-step Vestel charger Wi-Fi setup guide to get your charger online or back online. The most common issue is devices switching away from the charger hotspot during setup, so follow each step in order.</p>
+
+    <section class="section">
+      <h2>Before you start</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>Have your home Wi-Fi name (SSID) and password ready before you begin.</li>
+          <li>Your Wi-Fi password is case sensitive, so capitals and lowercase letters must match exactly.</li>
+          <li>Find your charger side label now. You will need the serial number and CBID.</li>
+          <li>The CBID is usually in this style: <span class="code-pill">EU_EDR_CB12...</span></li>
+          <li>If possible, keep this guide open on a second device while you do the steps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 1: Open the charger hotspot</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Turn the charger <strong>off</strong> at the power supply, then turn it back <strong>on</strong>.</li>
+          <li>Wait for startup to finish. Do not continue until the blue and green flashing has stopped (this can take up to 2 minutes).</li>
+          <li>Open <strong>Wi-Fi settings</strong> on your phone, tablet, or laptop.</li>
+          <li>Find a network name that starts with <strong>700</strong> (this is your charger hotspot).</li>
+          <li>Connect to it and enter your <strong>CBID</strong> as the hotspot password.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 2: Stay connected to the charger hotspot</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>Your device may show <strong>Connected without internet</strong> or <strong>No Internet</strong>. This is normal during setup, so stay connected.</li>
+          <li>Phones and tablets often jump back to home Wi-Fi or mobile data automatically.</li>
+          <li>If this happens, go back to Wi-Fi settings and reconnect to the charger hotspot (the one starting with <strong>700</strong>).</li>
+          <li>Always confirm you are still on the charger hotspot before trying the login page.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 3: Open the charger login page</h2>
+      <div class="table-like">
+        <section class="compare-card">
+          <h3>A) Vestel HS chargers</h3>
+          <p>Use these details only if your model label includes <strong>HS</strong>.</p>
+          <p><strong>Login page:</strong></p>
+          <div class="copy-row">
+            <span class="code-pill">192.168.35.1</span>
+            <button class="copy-btn" data-copy="192.168.35.1">Copy IP</button>
+          </div>
+          <ul class="list-clean">
+            <li>Open your browser and go to <strong>192.168.35.1</strong>.</li>
+            <li>Username is <strong>admin</strong>.</li>
+            <li>Password is in your supplied booklet (charger-specific).</li>
+          </ul>
+        </section>
+
+        <section class="compare-card">
+          <h3>B) Vestel non-HS chargers</h3>
+          <p>Use these details if your model label does <strong>not</strong> include HS.</p>
+          <p><strong>Login page:</strong></p>
+          <div class="copy-row">
+            <span class="code-pill">192.168.1.1</span>
+            <button class="copy-btn" data-copy="192.168.1.1">Copy IP</button>
+          </div>
+          <ul class="list-clean">
+            <li>Open your browser and go to <strong>192.168.1.1</strong>.</li>
+            <li>E.ON non-HS login is usually <strong>admin</strong> / <strong>eon01</strong>.</li>
+            <li>If you have different non-HS credentials, use your charger-specific details.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 4: If the page does not load</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Go back to Wi-Fi settings and check you are still connected to the charger hotspot (name starts with <strong>700</strong>).</li>
+          <li>If you are not, reconnect using your CBID password.</li>
+          <li>Temporarily turn off mobile data and auto-join to other Wi-Fi networks, then try the login page again.</li>
+          <li>Close and reopen your browser, then re-enter the correct login IP.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Step 5: Connect the charger to home Wi-Fi using the web UI</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>After login, open the top-left menu.</li>
+          <li>Select <strong>Network Interface</strong>.</li>
+          <li>Select <strong>WLAN</strong> on the left.</li>
+          <li>Set <strong>WLAN</strong> to <strong>Enabled</strong>.</li>
+          <li>Enter your home Wi-Fi name (SSID).</li>
+          <li>Enter your home Wi-Fi password exactly (case sensitive).</li>
+          <li>Set <strong>Security</strong> to <strong>WPA/WPA2 PSK</strong>.</li>
+          <li>Set <strong>IP Settings</strong> to <strong>DHCP</strong>.</li>
+          <li>Press <strong>Save</strong>.</li>
+          <li>Go to <strong>Main Page</strong>, set <strong>Pre-Sets</strong> to <strong>WLAN</strong>, then press <strong>Save</strong> again.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>After saving</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>Allow up to 15 minutes for the charger to show online.</li>
+          <li>When setup is complete, disconnect from the charger hotspot.</li>
+          <li>If it still does not come online, restart both the charger and your router, then repeat this guide from Step 1.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Connectivity tips</h2>
+      <div class="card">
+        <ul class="list-clean">
+          <li>The charger needs a stable Wi-Fi signal to stay online.</li>
+          <li>Garages, walls, and long distance from the router can weaken the signal.</li>
+          <li>If needed, use a Wi-Fi extender or powerline adapter to improve coverage near the charger.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="login.html">Login</a>
+      <a href="billing.html">Billing</a>
+    </div>
+    <small>Vestel EV chargers only.</small>
+  </div>
+</footer>
+
+<button class="back-to-top" data-back-top>↑</button>
+<script src="script.js" defer></script>
+</body>
+</html>

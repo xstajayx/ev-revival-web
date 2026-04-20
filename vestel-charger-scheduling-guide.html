@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Schedule a Vestel Charger (Step-by-Step Guide) | EV Revival</title>
+  <meta name="description" content="Learn how to schedule a Vestel charger step by step, including off-peak setup checks, overnight timing issues, and common reasons schedules fail.">
+  <link rel="canonical" href="https://ev.jworldcreations.com/vestel-charger-scheduling-guide.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a><nav class="desktop-nav"><a href="index.html">Home</a><a href="vestel-charger-wifi-setup.html">Vestel charger Wi-Fi setup</a><a href="vestel-charger-scheduling-guide.html" aria-current="page">Scheduling guide</a><a href="vestel-charger-help.html">Help</a><a href="pricing.html">Pricing</a></nav><button class="menu-btn" data-menu-open>Menu</button></div></header>
+<div class="mobile-drawer" data-drawer aria-hidden="true"><div class="drawer-panel"><button class="menu-btn" data-menu-close>Close</button><div class="drawer-links"><a href="index.html">Home</a><a href="vestel-charger-wifi-setup.html">Vestel charger Wi-Fi setup</a><a href="vestel-charger-scheduling-guide.html">How to schedule a Vestel charger</a><a href="vestel-charger-help.html">Help with my Vestel charger</a><a href="faqs.html">FAQs</a></div></div></div>
+
+<main class="section">
+  <div class="container">
+    <h1>How to schedule a Vestel charger</h1>
+    <p class="section-intro">Use this page for plain-English schedule checks. Keep expectations practical: schedule commands depend on charger firmware, time settings, connectivity, and app/backend communication.</p>
+
+    <section class="section">
+      <h2>What to check first</h2>
+      <div class="card">
+        <ol class="list-clean">
+          <li>Confirm your charger is online first with the <a href="vestel-charger-wifi-setup.html">Vestel charger Wi-Fi setup guide</a>.</li>
+          <li>Check charger date and time in your charger interface/app controls.</li>
+          <li>Confirm your schedule start and end times are saved correctly.</li>
+          <li>If using managed connection settings, verify your <a href="ocpp.html">Vestel charger OCPP setup</a>.</li>
+          <li>If app access is the issue, open <a href="vestel-alternative-app.html">Vestel alternative app</a> guidance first.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How off-peak scheduling works</h2>
+      <div class="card">
+        <p>Off-peak scheduling means your charger waits for your cheaper tariff window. A common setup is "start after midnight" and "stop before morning".</p>
+        <ul class="list-clean">
+          <li>Set a clear start time and stop time that match your tariff period.</li>
+          <li>Avoid overlapping or duplicate schedules unless your interface explicitly supports them.</li>
+          <li>After saving, run one test session and confirm charging begins at the expected time.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Common reasons schedules fail</h2>
+      <div class="grid cards">
+        <article class="card"><h3>Charger offline</h3><p>If the charger drops offline, schedule commands may not reach the charger when needed.</p></article>
+        <article class="card"><h3>Wrong time on charger</h3><p>If charger time is incorrect, it can run too early, too late, or not at all.</p></article>
+        <article class="card"><h3>Conflicting settings</h3><p>Vehicle-side charging timers can conflict with charger-side schedules.</p></article>
+        <article class="card"><h3>Session not restarted</h3><p>Some firmware versions need a fresh plug-in/session after schedule changes.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Overnight schedule issues explained simply</h2>
+      <div class="card">
+        <p>Overnight windows cross midnight, which can cause confusion. Example: 00:30 to 05:30 is one overnight window, not two separate daytime windows.</p>
+        <ul class="list-clean">
+          <li>If a schedule starts before midnight and ends after midnight, double-check how your charger UI expects that range.</li>
+          <li>After changing overnight times, save once, then test with a short near-term schedule to confirm behaviour.</li>
+          <li>If charging starts immediately when it should wait, review both vehicle timers and charger timers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Need more help?</h2>
+      <div class="card">
+        <p>Use the <a href="vestel-charger-help.html">Help with my Vestel charger</a> hub for quick paths to setup, faults, and account help.</p>
+        <p>For charger faults, use <a href="vestel-charger-error-help.html">Vestel charger fault and error help</a>. For broader answers, use the <a href="faqs.html">FAQ help hub</a>.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><div class="container"><div class="footer-links"><a href="vestel-alternative-app.html">Vestel alternative app</a><a href="vestel-charger-help.html">Help with my Vestel charger</a><a href="vestel-charger-wifi-setup.html">Vestel charger Wi-Fi setup</a><a href="vestel-charger-error-help.html">Vestel charger fault and error help</a><a href="faqs.html">FAQs</a></div><small>Vestel EV chargers only.</small></div></footer>
+<button class="back-to-top" data-back-top>↑</button><script src="script.js" defer></script>
+</body>
+</html>
