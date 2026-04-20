@@ -4,12 +4,12 @@
     { href: 'index.html', label: 'Home' },
     { href: 'features.html', label: 'Features' },
     { href: 'pricing.html', label: 'Pricing' },
-    { href: 'app.html', label: 'Use on Phone' },
-    { href: 'charger-online.html', label: 'Get Online' },
+    { href: 'vestel-alternative-app.html', label: 'Use on Phone' },
+    { href: 'vestel-charger-wifi-setup.html', label: 'Get your Vestel charger online' },
     { href: 'ocpp.html', label: 'Connect Your EV Charger' },
-    { href: 'error-help.html', label: 'Error Help' },
+    { href: 'vestel-charger-error-help.html', label: 'Error Help' },
     { href: 'faqs.html', label: 'FAQs' },
-    { href: 'support.html', label: 'Support' },
+    { href: 'vestel-charger-help.html', label: 'Help' },
     { href: 'terms.html', label: 'Terms' },
     { href: 'privacy.html', label: 'Privacy' }
   ];
