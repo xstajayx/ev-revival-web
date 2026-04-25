@@ -4,6 +4,7 @@
     { href: 'index.html', label: 'Home' },
     { href: 'features.html', label: 'Features' },
     { href: 'pricing.html', label: 'Pricing' },
+    { href: 'https://evrevival.jworldcreations.com', label: 'Go to app' },
     { href: 'vestel-alternative-app.html', label: 'Use on Phone' },
     { href: 'vestel-charger-wifi-setup.html', label: 'Get your Vestel charger online' },
     { href: 'ocpp.html', label: 'Connect Your EV Charger' },
