@@ -1,0 +1,27 @@
+{
+  "version": "phase1-rule-based",
+  "title": "Vestel Charger Help",
+  "intro": "I can help with safe basic checks. I can’t inspect your installation remotely.",
+  "disclaimer": "General guidance only. For electrical faults, stop using the charger and contact a qualified professional.",
+  "emergencyTriggers": [
+    "burning smell",
+    "heat damage",
+    "exposed wiring",
+    "water ingress",
+    "electric shock",
+    "repeated breaker trips",
+    "charger casing damage",
+    "persistent red fault light"
+  ],
+  "quickIssues": [
+    { "id": "offline", "label": "Charger offline" },
+    { "id": "red_fault", "label": "Red light / fault" },
+    { "id": "unusual_light", "label": "Yellow / unusual light" },
+    { "id": "not_charging", "label": "Not charging" },
+    { "id": "rfid", "label": "RFID not working" },
+    { "id": "schedule", "label": "Schedule not working" },
+    { "id": "cable_stuck", "label": "Cable stuck" },
+    { "id": "app", "label": "App connection issue" },
+    { "id": "ocpp", "label": "OCPP setup help" }
+  ]
+}
