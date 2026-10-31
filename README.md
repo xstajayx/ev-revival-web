@@ -1,6 +1,6 @@
 # EV Revival (Static GitHub Pages Website)
 
-A production-ready, mobile-first static support website for **Vestel EV chargers only**.
+A production-ready, mobile-first static support website for **compatible Vestel and Innogy EV chargers**, with existing technical guides specific to Vestel models.
 
 ## What is included
 - Multi-page static site (HTML/CSS/JS), no backend.
