@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innogy eBox Setup with eConfig | EV Revival</title>
+<meta name="description" content="Connect your compatible Innogy eBox to EV Revival using eConfig. Select a third-party backend and enter your OCPP address with your charger ID.">
+<link rel="canonical" href="https://ev.jworldcreations.com/innogy-charger-setup.html">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">EV</span> EV Revival</a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a><a href="innogy-charger-setup.html" aria-current="page">Innogy eBox setup</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="vestel-charger-wifi-setup.html">Get Online</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="vestel-charger-help.html">Help</a>
+    </nav>
+    <button class="menu-btn" data-menu-open aria-label="Open menu">Menu</button>
+  </div>
+</header>
+<div class="mobile-drawer" data-drawer aria-hidden="true"><div class="drawer-panel"><button class="menu-btn" data-menu-close>Close</button><div class="drawer-links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="innogy-charger-setup.html" aria-current="page">Innogy eBox setup</a><a href="pricing.html">Pricing</a><a href="vestel-charger-wifi-setup.html">Get Online</a><a href="faqs.html">FAQs</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="vestel-charger-help.html">Help</a></div></div></div>
+
+<main id="main" class="section">
+<div class="container">
+<h1>Set up your Innogy eBox with eConfig</h1>
+<p class="section-intro">Connect your compatible Innogy eBox to EV Revival using the eConfig app and your charger ID.</p>
+<section class="section">
+<h2>Before you start</h2>
+<div class="card"><ul class="list-clean">
+<li>Have your charger ID ready. You will use it in the OCPP address below.</li>
+<li>Keep your charger’s setup details and manufacturer instructions available.</li>
+</ul></div>
+</section>
+<section class="section">
+<h2>1. Download eConfig</h2>
+<div class="card"><p>Download the <strong>eConfig</strong> app from your phone’s app store.</p><p>Open the app and follow the on-screen setup instructions for your Innogy eBox.</p></div>
+</section>
+<section class="section">
+<h2>2. Select a third-party backend</h2>
+<div class="card"><p>During setup, select <strong>3rd party backend</strong>.</p></div>
+</section>
+<section class="section">
+<h2>3. Update the backend URL</h2>
+<div class="card">
+<p>Enter your OCPP address using your charger ID in place of <strong>&lt;CBID&gt;</strong>:</p>
+<p><strong>OCPP address:</strong><br><code style="overflow-wrap:anywhere;">wss://ocpp.jworldcreations.com/ws/&lt;CBID&gt;</code></p>
+<p class="notice">Replace the entire <strong>&lt;CBID&gt;</strong> placeholder, including the angle brackets, with your own charger ID. Do not enter the placeholder literally.</p>
+<p>Continue through the app’s on-screen instructions to apply the configuration and complete setup.</p>
+</div>
+</section>
+<section class="section">
+<h2>4. Check the connection</h2>
+<div class="card"><p>Open EV Revival and check your charger’s connection status. If it does not connect, check that the backend URL matches the address above and includes your correct charger ID.</p>
+<div class="cta-row"><a class="btn btn-primary" href="https://evrevival.jworldcreations.com">Go to the App</a><a class="btn btn-secondary" href="mailto:jworldcreations@hotmail.com">Contact support</a></div></div>
+</section>
+<p class="muted">This guide is for compatible Innogy eBox chargers. Vestel setup instructions are provided separately.</p>
+</div>
+</main>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="pricing.html">Pricing</a><a href="faqs.html">FAQs</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div><small>For compatible Vestel and Innogy EV chargers.</small></div></footer>
+<button class="back-to-top" data-back-top aria-label="Back to top">↑</button>
+<script src="script.js" defer></script>
+</body>
+</html>
