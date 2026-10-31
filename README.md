@@ -15,6 +15,7 @@ A production-ready, mobile-first static support website for **compatible Vestel 
 - `index.html` — homepage
 - `features.html` — features overview
 - `charger-online.html` — HS vs non-HS setup guide
+- `innogy-charger-setup.html` — Innogy eBox setup using eConfig and a third-party OCPP backend
 - `ocpp.html` — OCPP connection guide
 - `error-help.html` — light/error troubleshooting
 - `faqs.html` — FAQ accordions

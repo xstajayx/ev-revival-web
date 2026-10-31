@@ -331,11 +331,28 @@ footer {
 .hero-image-wrap {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.hero-charger {
+  flex: 1 1 0;
+  max-width: 190px;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-charger figcaption {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .hero-image {
-  width: min(190px, 48vw);
-  height: auto;
+  width: 100%;
+  height: clamp(180px, 24vw, 260px);
   object-fit: contain;
 }
 
