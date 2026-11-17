@@ -29,3 +29,7 @@ esp-web-install-button:not(:defined)>[slot="unsupported"],esp-web-install-button
 .local-showcase figcaption{padding:.7rem 1rem;color:var(--text-muted);font-size:.85rem}
 .local-showcase a:focus-visible{outline-offset:-5px}
 @media(max-width:460px){.hardware-card dl div{flex-wrap:wrap}.hardware-card dd{text-align:left}}
+
+#release-hash{display:block;overflow-wrap:anywhere;font-size:.85rem}#release-version,#install-mode{max-width:100%;padding:.5rem;font:inherit}#update-recovery{scroll-margin-top:90px}
+.install-panel>div{min-width:0}
+#install-mode{width:100%}

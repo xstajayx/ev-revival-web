@@ -56,6 +56,15 @@
         <p class="local-eyebrow">USB installation</p>
         <h2>Flash EV Revival Local</h2>
         <p>Use desktop <strong>Chrome or Edge</strong> and a <strong>USB data cable</strong>. Close any serial monitor using the CYD's port.</p>
+        <p id="verified-release" role="status"></p>
+        <label for="release-version">Approved firmware version</label>
+        <select id="release-version"></select>
+        <p><strong>SHA-256</strong><br><code id="release-hash"></code></p>
+        <button type="button" id="copy-release-hash" class="copy-btn">Copy SHA-256</button>
+        <p><strong>Verified Firmware</strong> means downloaded bytes match reviewed release pins. <strong>Verified Hardware</strong> is separate: the installer checks chip family and flash size; you must confirm the display and touch.</p>
+        <label for="install-mode">Installation option</label>
+        <select id="install-mode"><option value="install">First installation — settings may be lost</option><option value="update">Update existing EV Revival Local — currently blocked</option><option value="recovery">Recovery — reinstall approved firmware</option></select>
+        <label class="hardware-check"><input id="data-loss-confirm" type="checkbox"><span>I accept replacement of firmware and possible loss of Wi-Fi, RFID, schedules, PINs and session history. Full erase, if selected in the installer, deletes all device data.</span></label>
         <label class="hardware-check"><input id="hardware-confirm" type="checkbox"><span>My CYD matches the supported board, display and touch hardware above.</span></label>
         <p class="install-warning">Installation replaces the firmware currently on the CYD. Export sessions and record settings first. Choosing <strong>Erase device</strong> clears Wi-Fi, RFID cards, PINs and session history.</p>
       </div>
@@ -99,12 +108,23 @@
       <ol class="install-steps">
         <li><strong>Connect the CYD.</strong> Plug it into your computer with a USB data cable. Confirm the hardware above, then click <strong>Flash EV Revival Local</strong>.</li>
         <li><strong>Choose the USB serial port.</strong> Select the CYD, often listed as <strong>USB-SERIAL CH340</strong> or <strong>CP210x</strong>. On the test computer it was COM5. Your port number may differ.</li>
-        <li><strong>Install the firmware.</strong> Follow the installer prompts. For a fresh setup choose <strong>Erase device</strong>. To keep saved settings on a matching installation, leave erase unticked. Keep USB connected until installation finishes.</li>
+        <li><strong>Install the firmware.</strong> Follow the installer prompts. Leave full erase unticked unless a clean reset is necessary and you have accepted data loss. This factory image can overwrite settings even without full erase; it is not a validated settings-preserving update. Keep USB connected until installation finishes.</li>
         <li><strong>Start the CYD.</strong> Disconnect in the browser, release BOOT and unplug/replug USB. Tap the calibration targets if prompted, then follow <strong>Setup guide</strong> on the touchscreen.</li>
       </ol>
       <p class="muted">Router Wi-Fi joins the CYD and charger to the same 2.4 GHz network. Wi-Fi Direct lets the charger join the CYD's own network. Copy the OCPP address shown in setup into the charger and keep its existing CB-ID.</p>
     </div>
   </section>
+  <section id="update-recovery" class="section"><div class="container local-content">
+    <h2>Update and recovery</h2>
+    <h3>Update an existing installation</h3>
+    <p>Settings-preserving updates are blocked for this factory image. Its write range overlaps NVS and includes boot and partition metadata. Leaving erase unticked is not a guarantee of preservation. Export session history if your installed firmware offers export, and record network, RFID, schedule and PIN settings. No complete configuration backup/restore capability has been verified.</p>
+    <h3>Recover a failed installation</h3>
+    <ol><li>Check the exact supported board, display and touch hardware before retrying.</li><li>Connect USB. Hold <strong>BOOT</strong>, press and release <strong>RESET</strong>, then retry connecting in the installer. Release BOOT when it connects.</li><li>Select <strong>Recovery</strong> and an approved compatible version above. Reinstallation verifies the download again. Only the existing approved release is currently available; no older stable recovery release has been validated.</li><li>A full erase is a last resort for persistent incompatible settings, not a fix for an unsupported display or chip. It destroys Wi-Fi, RFID, schedules, PINs and history; confirmation is required.</li><li>After completion disconnect in the browser, then power-cycle the CYD. Reconfigure and check charger operation before relying on it.</li></ol>
+    <p><strong>Interrupted flash:</strong> firmware may be unusable; recovery is not automatic or guaranteed. Try the bootloader procedure and reinstall. If connection remains impossible, stop and seek hardware assistance.</p>
+    <p><strong>Incompatible firmware or blank screen:</strong> verify the physical board and display first; do not try random firmware or assume erase will make incompatible hardware work.</p>
+    <p><strong>Download or checksum failure:</strong> nothing is erased or written by the verification stage. Retry on a reliable HTTPS connection; never bypass a mismatch.</p>
+    <p><strong>Serial failure:</strong> use a USB data cable, close other serial programs and retry another port. Driver or power faults may require separate diagnosis.</p>
+  </div></section>
   <section id="downloads" class="section">
     <div class="container local-content">
       <h2>Firmware and licence</h2>

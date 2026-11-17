@@ -1,0 +1,19 @@
+[
+  {
+    "version": "2026-11-17",
+    "date": "17 November 2026",
+    "board": "ESP32-2432S028-ILI9341_2-XPT2046",
+    "chipFamily": "ESP32",
+    "flashBytes": 4194304,
+    "updateSafe": false,
+    "parts": [
+      {
+        "url": "https://ev.jworldcreations.com/ev-revival-local/firmware/EV-Revival-Local-ESP32-2432S028-2026-11-17-factory.bin",
+        "path": "firmware/EV-Revival-Local-ESP32-2432S028-2026-11-17-factory.bin",
+        "size": 1702160,
+        "sha256": "68545af13435c7f508f4f82261f364eef27ba067e196d22b17a8b351196a06ec",
+        "offset": 0
+      }
+    ]
+  }
+]
