@@ -50,3 +50,9 @@ esp-web-install-button:not(:defined)>[slot="unsupported"],esp-web-install-button
 @media(max-width:460px){.capability-grid{grid-template-columns:1fr}.local-page .local-hero h1{font-size:2.25rem}.local-page .hardware-card dl div{flex-wrap:wrap}.local-page .hardware-card dd{text-align:left}}
 .local-page .footer-links a{color:var(--text-muted)}
 .local-page .footer-links a:hover{color:var(--primary)}
+
+.local-showcase{margin:1.25rem 0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#00171e}
+.local-showcase a,.local-showcase picture{display:block}
+.local-showcase img{display:block;width:100%;height:auto}
+.local-showcase figcaption{padding:.7rem 1rem;color:var(--text-muted);font-size:.85rem}
+.local-showcase a:focus-visible{outline-offset:-5px}
