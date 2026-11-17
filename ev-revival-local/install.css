@@ -1,0 +1,23 @@
+.local-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.5rem;padding:clamp(1.4rem,4vw,3rem);align-items:center}
+.local-eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;font-weight:700;color:var(--primary)!important}
+.local-hero h1{font-size:clamp(2.25rem,5.5vw,3.8rem);letter-spacing:-.045em;line-height:1.08;margin:.65rem 0 1.25rem}
+.local-lead{max-width:49ch;font-size:1.09rem}.local-meta{font-size:.86rem}
+.hardware-card{background:#10243a;color:#f4f8ff;border-radius:16px;padding:1.5rem;border:1px solid #264965}
+.hardware-label{color:#9fd9f9;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.hardware-model{color:#fff!important;font-size:clamp(1.2rem,3vw,1.65rem);font-weight:700;letter-spacing:-.025em;margin:.6rem 0 1rem}
+.hardware-card dl{margin:0 0 1.25rem}.hardware-card dl div{display:flex;gap:1rem;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid #2d4158}
+.hardware-card dt{color:#b7c9dc}.hardware-card dd{margin:0;text-align:right;font-weight:600}.hardware-card a{font-size:.87rem;color:#9fe9f3;text-decoration:underline;text-underline-offset:3px}
+.local-content{max-width:900px}.local-content h2{margin-top:0}.install-panel{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2rem;align-items:center;background:var(--surface);border:1px solid #a8c8f7;border-radius:18px;padding:clamp(1.3rem,4vw,2.4rem);box-shadow:var(--shadow)}
+.hardware-check{display:flex;align-items:flex-start;gap:.8rem;font-weight:600;margin:1.4rem 0;cursor:pointer}
+.hardware-check input{width:1.3rem;height:1.3rem;flex-shrink:0;accent-color:var(--primary);margin:.15rem 0}
+.install-warning{font-size:.9rem;color:var(--text-muted)}.install-action{min-width:0;background:#f0f5fd;padding:1.4rem;border-radius:12px}
+.flash-button{width:100%;font:inherit;cursor:pointer;min-height:52px}.flash-button:disabled{opacity:.55;cursor:not-allowed}
+#install-message{font-size:.88rem;color:var(--text-muted);min-height:3em}.manual-link,.text-link{text-decoration:underline;text-underline-offset:3px}.manual-link{font-size:.88rem}
+.install-steps{padding-left:1.45rem}.install-steps li{padding:.45rem 0 .75rem .4rem}.local-links{display:flex;flex-wrap:wrap;gap:1rem}.local-links a{text-decoration:underline;text-underline-offset:3px;color:var(--primary)}
+code{overflow-wrap:anywhere}#install,#supported,#downloads{scroll-margin-top:90px}
+:focus-visible{outline:3px solid #0f6bff;outline-offset:4px}
+@media(max-width:760px){.local-hero,.install-panel{grid-template-columns:1fr;gap:1.2rem}.hardware-card dl div{font-size:.93rem}.local-hero h1{font-size:2.7rem}.install-action{padding:1rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+esp-web-install-button:not(:defined)>[slot="unsupported"],esp-web-install-button:not(:defined)>[slot="not-allowed"]{display:none}
+#download-release{font:inherit;font-weight:600;cursor:pointer}#download-release:disabled{opacity:.6;cursor:wait}

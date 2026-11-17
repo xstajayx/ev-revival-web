@@ -1,0 +1,17 @@
+{
+  "name": "EV Revival Local \u00b7 ESP32-2432S028 ILI9341_2",
+  "version": "2026-11-17",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "firmware/EV-Revival-Local-ESP32-2432S028-2026-11-17-factory.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ],
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0
+}

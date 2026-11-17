@@ -3,6 +3,7 @@
   const sharedNavLinks = [
     { href: 'index.html', label: 'Home' },
     { href: 'features.html', label: 'Features' },
+    { href: 'ev-revival-local.html', label: 'EV Revival Local' },
     { href: 'pricing.html', label: 'Pricing' },
     { href: 'https://evrevival.jworldcreations.com', label: 'Go to app' },
     { href: 'vestel-alternative-app.html', label: 'Use on Phone' },
