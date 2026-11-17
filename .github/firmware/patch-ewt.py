@@ -14,4 +14,12 @@ s=s[:a]+'''    let buffers;
       return;
     }
     const filePromises = buffers.map(buffer => Promise.resolve(Array.from(new Uint8Array(buffer), b=>String.fromCharCode(b)).join('')));
-'''+s[b:];p.write_text(s)
+'''+s[b:]
+needle='    const fireStateEvent = (stateUpdate) =>'
+start=s.index(needle);end=s.index('    const transport =',start)
+s=s[:start]+'''    const fireStateEvent = (stateUpdate) => {
+      try { window.evRevivalPolicy?.status?.(stateUpdate); } catch (_) { /* presentation must not alter safety */ }
+      onEvent({ ...stateUpdate, manifest, build, chipFamily });
+    };
+'''+s[end:]
+p.write_text(s)

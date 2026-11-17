@@ -30,6 +30,14 @@ esp-web-install-button:not(:defined)>[slot="unsupported"],esp-web-install-button
 .local-showcase a:focus-visible{outline-offset:-5px}
 @media(max-width:460px){.hardware-card dl div{flex-wrap:wrap}.hardware-card dd{text-align:left}}
 
-#release-hash{display:block;overflow-wrap:anywhere;font-size:.85rem}#release-version,#install-mode{max-width:100%;padding:.5rem;font:inherit}#update-recovery{scroll-margin-top:90px}
+#release-hash{display:block;overflow-wrap:anywhere;font-size:.85rem}#update-recovery{scroll-margin-top:90px}
 .install-panel>div{min-width:0}
-#install-mode{width:100%}
+
+
+#install-progress{width:100%;height:.65rem;accent-color:var(--primary)}
+#help-details{padding:1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface)}
+#help-details>summary{font-size:1.1rem;font-weight:700;cursor:pointer}
+#help-details h3{margin-top:1.5rem}
+#installation-help{scroll-margin-top:100px}
+
+.local-hero{grid-template-columns:1fr;gap:1rem}.local-hero .local-lead{max-width:62ch}
