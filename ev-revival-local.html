@@ -70,12 +70,12 @@
       <div class="install-action">
         <esp-web-install-button id="installer" manifest="ev-revival-local/manifest.json">
           <button id="flash-button" class="btn btn-primary flash-button" slot="activate" disabled>Flash EV Revival Local</button>
-          <p slot="unsupported">Open this page in desktop Chrome or Edge to flash over USB. You can also download the firmware below.</p>
+          <p slot="unsupported">Open this page in desktop Chrome or Edge to flash over USB.</p>
           <p slot="not-allowed">Open the HTTPS version of this page to use the installer.</p>
         </esp-web-install-button>
         <p id="install-message" role="status" aria-live="polite">Confirm your hardware to enable the flash button.</p>
-        <noscript><p>Enable JavaScript to use the browser installer. The downloads below include manual flashing steps.</p></noscript>
-        <a class="manual-link" href="https://espressif.github.io/esptool-js/" target="_blank" rel="noopener noreferrer">Open Espressif's manual flasher</a>
+        <noscript><p>Enable JavaScript to use the browser installer.</p></noscript>
+        
       </div>
     </div>
   </section>
@@ -93,16 +93,11 @@
   </section>
   <section id="downloads" class="section">
     <div class="container local-content">
-      <h2>Downloads and licence</h2>
-      <p>The full download contains the factory BIN, instructions, JWorldCreations licence, library credits, matching source and rebuild material.</p>
-      <div class="cta-row">
-        <button id="download-release" type="button" class="btn btn-primary">Download full release · 61 MB</button>
-        <a class="btn btn-secondary" href="ev-revival-local/firmware/EV-Revival-Local-ESP32-2432S028-2026-11-17-factory.bin" download>Download factory BIN · 1.6 MB</a>
-      </div>
-      <p id="download-message" class="muted" role="status" aria-live="polite"></p>
-      <p class="muted">For manual flashing, use this merged BIN at address <code>0x0</code> with <strong>DIO</strong>, <strong>40 MHz</strong> and <strong>4 MB</strong>.</p>
-      <p class="local-links"><a href="ev-revival-local/downloads/LICENSE">Application licence</a><a href="ev-revival-local/downloads/THIRD-PARTY-NOTICES.md">Library credits</a><a href="ev-revival-local/firmware/SHA256SUMS.txt">SHA-256 checksum</a></p>
-      <p>Free personal use is covered by the included licence. For permissions or support, email <a class="text-link" href="mailto:jworldcreations@hotmail.com">jworldcreations@hotmail.com</a>.</p>
+      <h2>Firmware and licence</h2>
+      <p>Install the official EV Revival Local firmware using the browser installer above. Use a supported desktop browser and USB data cable.</p>
+      <p class="muted">For recovery or alternative installation methods, contact support. The compiled firmware must remain retrievable by the browser during installation.</p>
+      <p class="local-links"><a href="ev-revival-local/downloads/LICENSE">Application licence</a><a href="ev-revival-local/downloads/THIRD-PARTY-NOTICES.md">Third-party notices</a></p>
+      <p>For permissions or support, email <a class="text-link" href="mailto:jworldcreations@hotmail.com">jworldcreations@hotmail.com</a>.</p>
     </div>
   </section>
   <section class="section">
