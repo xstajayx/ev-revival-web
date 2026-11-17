@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flash EV Revival Local on your CYD | JWorldCreations</title>
   <meta name="description" content="Install EV Revival Local on a supported ESP32 CYD using your browser. Check the board, connect USB and follow the touchscreen setup guide.">
-  <meta name="theme-color" content="#04171d">
+  <meta name="theme-color" content="#0f6bff">
   <link rel="canonical" href="https://ev.jworldcreations.com/ev-revival-local.html">
   <link rel="icon" href="assets/icons/icon-192.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
   <script src="script.js" defer></script>
   <script src="ev-revival-local/install.js" defer></script>
 </head>
-<body class="local-page">
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav">
@@ -50,33 +50,6 @@
       </aside>
     </div>
   </section>
-  <section id="features" class="section" aria-labelledby="features-title">
-    <div class="container">
-      <p class="local-eyebrow">Built for local control</p>
-      <h2 id="features-title">Features &amp; Capabilities</h2>
-      <p class="local-lead">Everyday charging controls, useful diagnostics and flexible connectivity from one local touchscreen.</p>
-      <ul class="capability-grid">
-        <li><strong>Start &amp; stop</strong><span>Control charging locally.</span></li>
-        <li><strong>Live dashboard</strong><span>Power, session energy, duration and charger status.</span></li>
-        <li><strong>UK-time schedules</strong><span>Set charging times and the controller clock.</span></li>
-        <li><strong>RFID management</strong><span>Add and manage access tags.</span></li>
-        <li><strong>Faults &amp; events</strong><span>Review faults and charging events.</span></li>
-        <li><strong>PIN &amp; phone access</strong><span>Protect settings and use local phone controls.</span></li>
-        <li><strong>Service &amp; diagnostics</strong><span>Charger service, reset and diagnostic tools.</span></li>
-        <li><strong>Multiple chargers</strong><span>Configure and manage more than one charger.</span></li>
-        <li class="connectivity-capability"><strong>Router Wi-Fi or Direct Wi-Fi</strong><span>Join your local router network, or use the controller’s built-in access point where no router network is available.</span></li>
-      </ul>
-      <p class="muted">Available controls depend on charger compatibility and firmware. <a class="text-link" href="#install">Install EV Revival Local</a> on the supported CYD below.</p>
-    </div>
-  </section>
-  <section id="supported" class="section">
-    <div class="container local-content">
-      <h2>Check your board first</h2>
-      <p>Match the board model, display and touchscreen listed above. CYD boards with similar names can use different screens. This image requires a classic ESP32 with 4 MB flash, ILI9341_2 display and XPT2046 touch.</p>
-      <p class="muted">The installer identifies the ESP32 chip family. It cannot check which display or touchscreen is fitted. ESP32-S3 and other display variants need their own firmware build.</p>
-      <p>Your charger needs OCPP 1.6 JSON and a configurable backend address. Charger controls and settings depend on the model and firmware.</p>
-    </div>
-  </section>
   <section id="install" class="section">
     <div class="container install-panel">
       <div>
@@ -94,8 +67,30 @@
         </esp-web-install-button>
         <p id="install-message" role="status" aria-live="polite">Confirm your hardware to enable the flash button.</p>
         <noscript><p>Enable JavaScript to use the browser installer.</p></noscript>
-        
+
       </div>
+    </div>
+  </section>
+  <section id="features" class="section" aria-labelledby="features-title">
+    <div class="container">
+      <h2 id="features-title">Features &amp; Capabilities</h2>
+      <figure class="local-showcase">
+        <a href="ev-revival-local/EV-Revival-Local-info.png" aria-label="View the EV Revival Local completed features graphic at full size">
+          <picture>
+            <source srcset="ev-revival-local/EV-Revival-Local-info.webp" type="image/webp">
+            <img src="ev-revival-local/EV-Revival-Local-info.png" width="1122" height="1402" loading="lazy" decoding="async" alt="EV Revival Local completed features: touchscreen charging dashboard, RFID tags, UK schedules, PIN and phone access, charger service, multiple chargers, and Router or Direct Wi-Fi." aria-describedby="showcase-caption">
+          </picture>
+        </a>
+        <figcaption id="showcase-caption">EV Revival Local — completed features. Select the image to view it at full size.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="supported" class="section">
+    <div class="container local-content">
+      <h2>Check your board first</h2>
+      <p>Match the board model, display and touchscreen listed above. CYD boards with similar names can use different screens. This image requires a classic ESP32 with 4 MB flash, ILI9341_2 display and XPT2046 touch.</p>
+      <p class="muted">The installer identifies the ESP32 chip family. It cannot check which display or touchscreen is fitted. ESP32-S3 and other display variants need their own firmware build.</p>
+      <p>Your charger needs OCPP 1.6 JSON and a configurable backend address. Charger controls and settings depend on the model and firmware.</p>
     </div>
   </section>
   <section class="section" aria-labelledby="steps-title">
