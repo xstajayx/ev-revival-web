@@ -33,50 +33,35 @@
   <section class="hero">
     <div class="container hero-card local-hero">
       <div>
-        <p class="local-eyebrow">CYD firmware · By JWorldCreations</p>
+        <p class="local-eyebrow">Local charging · By JWorldCreations</p>
         <h1>Your charger.<br>Your local controls.</h1>
-        <p class="local-lead">EV Revival Local puts charger status, start and stop, schedules and RFID management on a small touchscreen, with an Owner page for your phone.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="#install">Install in your browser</a><a class="btn btn-secondary" href="#features">Features &amp; capabilities</a><a class="btn btn-secondary" href="#supported">Check your CYD model</a></div>
-        <p class="muted local-meta">Free to install and use under the included licence · Release 17 November 2026</p>
+        <p class="local-lead">Manage charging, schedules and RFID from your own touchscreen, with local access from your phone.</p>
+        <div class="cta-row"><a class="btn btn-secondary" href="#install">Get started</a><a class="btn btn-secondary" href="#features">Features &amp; capabilities</a><a class="btn btn-secondary" href="#installation-help">Check your CYD model</a></div>
+        <p class="muted local-meta">Free to install and use under the included licence</p>
       </div>
-      <aside class="hardware-card" aria-label="Supported hardware">
-        <span class="hardware-label">Supported CYD</span>
-        <p class="hardware-model">ESP32-2432S028</p>
-        <dl><div><dt>Processor</dt><dd>Classic ESP32 / ESP32-32E</dd></div>
-        <div><dt>Flash</dt><dd>4 MB</dd></div>
-        <div><dt>Display</dt><dd>2.8-inch ILI9341_2</dd></div>
-        <div><dt>Touch</dt><dd>XPT2046 resistive</dd></div></dl>
-        <a href="#supported">Check compatibility before flashing</a>
-      </aside>
     </div>
   </section>
-  <section id="install" class="section">
+  <section id="install" class="section" aria-labelledby="install-title">
     <div class="container install-panel">
       <div>
-        <p class="local-eyebrow">USB installation</p>
-        <h2>Flash EV Revival Local</h2>
-        <p>Use desktop <strong>Chrome or Edge</strong> and a <strong>USB data cable</strong>. Close any serial monitor using the CYD's port.</p>
-        <p id="verified-release" role="status"></p>
-        <label for="release-version">Approved firmware version</label>
-        <select id="release-version"></select>
-        <p><strong>SHA-256</strong><br><code id="release-hash"></code></p>
-        <button type="button" id="copy-release-hash" class="copy-btn">Copy SHA-256</button>
-        <p><strong>Verified Firmware</strong> means downloaded bytes match reviewed release pins. <strong>Verified Hardware</strong> is separate: the installer checks chip family and flash size; you must confirm the display and touch.</p>
-        <label for="install-mode">Installation option</label>
-        <select id="install-mode"><option value="install">First installation — settings may be lost</option><option value="update">Update existing EV Revival Local — currently blocked</option><option value="recovery">Recovery — reinstall approved firmware</option></select>
-        <label class="hardware-check"><input id="data-loss-confirm" type="checkbox"><span>I accept replacement of firmware and possible loss of Wi-Fi, RFID, schedules, PINs and session history. Full erase, if selected in the installer, deletes all device data.</span></label>
-        <label class="hardware-check"><input id="hardware-confirm" type="checkbox"><span>My CYD matches the supported board, display and touch hardware above.</span></label>
-        <p class="install-warning">Installation replaces the firmware currently on the CYD. Export sessions and record settings first. Choosing <strong>Erase device</strong> clears Wi-Fi, RFID cards, PINs and session history.</p>
+        <p class="local-eyebrow">Set up your touchscreen</p>
+        <h2 id="install-title">Install EV Revival Local</h2>
+        <p>Connect your CYD to a computer with a USB data cable. Use <strong>Chrome or Edge</strong>, then follow the installation prompts.</p>
+        <p class="local-meta muted" id="verified-release">Version 2026-11-17 · 17 November 2026</p>
+        <label class="hardware-check"><input id="hardware-confirm" type="checkbox"><span>My board is an ESP32-2432S028 / ESP32-32E with 4 MB memory, an ILI9341_2 display and XPT2046 touch.</span></label>
+        <label class="hardware-check"><input id="data-loss-confirm" type="checkbox"><span>I understand this is a fresh installation. It replaces existing software and may erase Wi-Fi details, RFID tags, schedules, PINs and charging history. I have saved anything I need.</span></label>
       </div>
       <div class="install-action">
         <esp-web-install-button id="installer" manifest="ev-revival-local/manifest.json">
-          <button id="flash-button" class="btn btn-primary flash-button" slot="activate" disabled>Flash EV Revival Local</button>
-          <p slot="unsupported">Open this page in desktop Chrome or Edge to flash over USB.</p>
-          <p slot="not-allowed">Open the HTTPS version of this page to use the installer.</p>
+          <button id="flash-button" class="btn btn-primary flash-button" slot="activate" disabled>Install EV Revival Local</button>
+          <p slot="unsupported">Use desktop Chrome or Edge to install over USB.</p>
+          <p slot="not-allowed">Open the HTTPS version of this page to install.</p>
         </esp-web-install-button>
-        <p id="install-message" role="status" aria-live="polite">Confirm your hardware to enable the flash button.</p>
-        <noscript><p>Enable JavaScript to use the browser installer.</p></noscript>
-
+        <p id="install-message" role="status" aria-live="polite">Confirm the two statements to get started.</p>
+        <progress id="install-progress" max="100" hidden aria-label="Installation progress"></progress>
+        <p class="muted local-meta">We automatically check the software and your board before installation. Keep the USB cable connected until it finishes.</p>
+        <a class="text-link" href="#installation-help">Need help?</a>
+        <noscript><p>Enable JavaScript to use the installer.</p></noscript>
       </div>
     </div>
   </section>
@@ -94,54 +79,28 @@
       </figure>
     </div>
   </section>
-  <section id="supported" class="section">
-    <div class="container local-content">
-      <h2>Check your board first</h2>
-      <p>Match the board model, display and touchscreen listed above. CYD boards with similar names can use different screens. This image requires a classic ESP32 with 4 MB flash, ILI9341_2 display and XPT2046 touch.</p>
-      <p class="muted">The installer identifies the ESP32 chip family. It cannot check which display or touchscreen is fitted. ESP32-S3 and other display variants need their own firmware build.</p>
-      <p>Your charger needs OCPP 1.6 JSON and a configurable backend address. Charger controls and settings depend on the model and firmware.</p>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="steps-title">
-    <div class="container local-content">
-      <h2 id="steps-title">Four steps from USB to setup</h2>
-      <ol class="install-steps">
-        <li><strong>Connect the CYD.</strong> Plug it into your computer with a USB data cable. Confirm the hardware above, then click <strong>Flash EV Revival Local</strong>.</li>
-        <li><strong>Choose the USB serial port.</strong> Select the CYD, often listed as <strong>USB-SERIAL CH340</strong> or <strong>CP210x</strong>. On the test computer it was COM5. Your port number may differ.</li>
-        <li><strong>Install the firmware.</strong> Follow the installer prompts. Leave full erase unticked unless a clean reset is necessary and you have accepted data loss. This factory image can overwrite settings even without full erase; it is not a validated settings-preserving update. Keep USB connected until installation finishes.</li>
-        <li><strong>Start the CYD.</strong> Disconnect in the browser, release BOOT and unplug/replug USB. Tap the calibration targets if prompted, then follow <strong>Setup guide</strong> on the touchscreen.</li>
-      </ol>
-      <p class="muted">Router Wi-Fi joins the CYD and charger to the same 2.4 GHz network. Wi-Fi Direct lets the charger join the CYD's own network. Copy the OCPP address shown in setup into the charger and keep its existing CB-ID.</p>
-    </div>
-  </section>
-  <section id="update-recovery" class="section"><div class="container local-content">
-    <h2>Update and recovery</h2>
-    <h3>Update an existing installation</h3>
-    <p>Settings-preserving updates are blocked for this factory image. Its write range overlaps NVS and includes boot and partition metadata. Leaving erase unticked is not a guarantee of preservation. Export session history if your installed firmware offers export, and record network, RFID, schedule and PIN settings. No complete configuration backup/restore capability has been verified.</p>
-    <h3>Recover a failed installation</h3>
-    <ol><li>Check the exact supported board, display and touch hardware before retrying.</li><li>Connect USB. Hold <strong>BOOT</strong>, press and release <strong>RESET</strong>, then retry connecting in the installer. Release BOOT when it connects.</li><li>Select <strong>Recovery</strong> and an approved compatible version above. Reinstallation verifies the download again. Only the existing approved release is currently available; no older stable recovery release has been validated.</li><li>A full erase is a last resort for persistent incompatible settings, not a fix for an unsupported display or chip. It destroys Wi-Fi, RFID, schedules, PINs and history; confirmation is required.</li><li>After completion disconnect in the browser, then power-cycle the CYD. Reconfigure and check charger operation before relying on it.</li></ol>
-    <p><strong>Interrupted flash:</strong> firmware may be unusable; recovery is not automatic or guaranteed. Try the bootloader procedure and reinstall. If connection remains impossible, stop and seek hardware assistance.</p>
-    <p><strong>Incompatible firmware or blank screen:</strong> verify the physical board and display first; do not try random firmware or assume erase will make incompatible hardware work.</p>
-    <p><strong>Download or checksum failure:</strong> nothing is erased or written by the verification stage. Retry on a reliable HTTPS connection; never bypass a mismatch.</p>
-    <p><strong>Serial failure:</strong> use a USB data cable, close other serial programs and retry another port. Driver or power faults may require separate diagnosis.</p>
-  </div></section>
-  <section id="downloads" class="section">
-    <div class="container local-content">
-      <h2>Firmware and licence</h2>
-      <p>Install the official EV Revival Local firmware using the browser installer above. Use a supported desktop browser and USB data cable.</p>
-      <p class="muted">For recovery or alternative installation methods, contact support. The compiled firmware must remain retrievable by the browser during installation.</p>
-      <p class="local-links"><a href="ev-revival-local/downloads/LICENSE">Application licence</a><a href="ev-revival-local/downloads/THIRD-PARTY-NOTICES.md">Third-party notices</a></p>
-      <p>For permissions or support, email <a class="text-link" href="mailto:jworldcreations@hotmail.com">jworldcreations@hotmail.com</a>.</p>
-    </div>
-  </section>
-  <section class="section">
+  <section class="section" id="installation-help">
     <div class="container local-content accordion">
-      <h2>Need a hand?</h2>
-      <details><summary>The CYD does not appear in the port list</summary><p>Use a data cable, try another USB port and close PlatformIO or other serial monitors. If needed, install the USB bridge manufacturer's driver for your board.</p></details>
-      <details><summary>The installer cannot connect</summary><p>Hold BOOT, tap RESET while holding BOOT, and retry the connection. Release BOOT once the installer connects.</p></details>
-      <details><summary>The screen stays black after installation</summary><p>Disconnect the browser, release BOOT and unplug/replug USB. If the screen stays black, check that the display and touchscreen match the supported model.</p></details>
-      <details><summary>Where do I open the phone controls?</summary><p>On the CYD, open <strong>Settings → Security &amp; phone access → Web owner login</strong> and tap <strong>Enable</strong>. Join the same network on your phone. Open the address displayed on the CYD and sign in as <strong>owner</strong> with the displayed password.</p></details>
-      <details><summary>Will this preserve my existing setup?</summary><p>Use the erase choice carefully. Erasing clears saved settings and sessions. Export any history you want to keep before installing. After updating, check the saved setup and charger status on the CYD.</p></details>
+      <details id="help-details"><summary>Need help?</summary>
+        <h3 id="supported">Is my board compatible?</h3>
+        <p>Use the ESP32-2432S028 / ESP32-32E board with 4 MB memory, ILI9341_2 display and XPT2046 touch. Similar-looking boards may not work. The installer checks the chip and memory automatically; you must confirm the display and touch. Your charger needs OCPP 1.6 JSON and a configurable connection address.</p>
+        <h3>What happens to my settings?</h3>
+        <p>This is a fresh install, not a settings-preserving update. Save any available session export and record your settings first. Settings may be overwritten even if you leave “Erase device” unticked. Selecting that option deletes all device data and requires confirmation.</p>
+        <h3>Recover or reinstall</h3>
+        <ol><li>Check your board matches the supported model. Close other programs using its USB connection.</li><li>Hold <strong>BOOT</strong>, press and release <strong>RESET</strong>, then connect using the installation button above. Release BOOT when connected.</li><li>Confirm compatibility and possible data loss, then reinstall using the same <a class="text-link" href="#install">Install EV Revival Local</a> button. The same approved software is checked again; there is no unverified fallback.</li><li>Use full erase only as a last resort for incompatible saved settings. It cannot fix incompatible hardware and deletes all saved data.</li><li>When installation finishes, disconnect in the browser, unplug/replug USB, and follow the touchscreen setup guide. Check charger operation before relying on it.</li></ol>
+        <p>Only the current approved version is available. Recovery after an interrupted installation is not automatic or guaranteed.</p>
+        <h3>Connection, download or display problems</h3>
+        <p><strong>No USB device:</strong> use a data cable, try another port and close other programs using the board. Your board may need its manufacturer's USB driver.</p>
+        <p><strong>Download or verification failed:</strong> no erase or write starts when these checks fail. Check your internet connection and retry; do not bypass verification.</p>
+        <p><strong>Blank screen or interrupted installation:</strong> check the exact board and display, then try the BOOT/RESET recovery steps. Do not try random software. If it still cannot connect, seek hardware assistance.</p>
+        <h3>After installation</h3>
+        <p>Follow Setup guide on the touchscreen. Router Wi-Fi uses your existing 2.4 GHz network; Direct Wi-Fi uses the controller’s own network. For phone controls, open Settings → Security &amp; phone access → Web owner login on the CYD and follow its instructions.</p>
+        <h3>Software verification details</h3>
+        <p>Verified software means its size and SHA-256 match the approved release. It does not certify your physical display or touchscreen.</p>
+        <p><strong>SHA-256</strong><code id="release-hash"></code></p>
+        <button type="button" id="copy-release-hash" class="copy-btn">Copy SHA-256</button>
+      </details>
+      <p class="local-links"><a href="ev-revival-local/downloads/LICENSE">Application licence</a><a href="ev-revival-local/downloads/THIRD-PARTY-NOTICES.md">Third-party notices</a></p>
     </div>
   </section>
 </main>
