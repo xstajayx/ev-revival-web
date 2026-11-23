@@ -182,7 +182,7 @@
     const escalate = create('button', 'chat-escalate', 'Escalate');
     escalate.type = 'button';
     escalate.addEventListener('click', () => {
-      const outcome = create('div', 'chat-bubble bot escalate', safetyEscalationText);
+      const outcome = create('div', 'chat-bubble bot escalate', 'For further support, seek advice from a qualified electrician, installer, or authorised service provider.');
       root.appendChild(outcome);
       root.scrollTop = root.scrollHeight;
     });
