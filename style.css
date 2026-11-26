@@ -483,3 +483,6 @@ footer {
   .chat-launcher { right: 0.7rem; bottom: 0.7rem; }
   .chat-panel { right: 0.7rem; bottom: 4.2rem; width: calc(100vw - 1.4rem); max-height: 74vh; }
 }
+
+/* Let long charger endpoint examples remain readable on narrow screens. */
+.code-pill { max-width: 100%; overflow-wrap: anywhere; white-space: normal; }

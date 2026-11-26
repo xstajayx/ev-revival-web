@@ -66,3 +66,19 @@ A production-ready, mobile-first static support website for **compatible Vestel 
 
 ## Login/Billing notice
 `login.html` and `billing.html` are intentionally placeholders only. No real authentication, billing, or payment integration is included yet.
+
+### Business disclosure release
+
+The public source contains the Business Information page, a central footer link,
+and the business contact email. Keep the approved personal details out of Git.
+To stage a release artifact after the owner approves the disclosure, supply
+`JWORLD_OPERATOR_NAME`, `JWORLD_BUSINESS_ADDRESS` (multiline, without the
+country line) and `JWORLD_PUBLISH_DISCLOSURE=1` through private build settings.
+Run `node tools/build-public.mjs <empty-output-directory-outside-the-repo>`.
+Names and addresses are rendered only in `business-information.html`. Without
+the flag the review artifact omits personal details. The page is accessible
+without an account, and its noindex directive cannot guarantee privacy.
+
+The current branch-based deployment does not run this private build. Arrange
+an approved artifact-based release separately. Keep transactional disclosures
+and release configuration out of public source history.

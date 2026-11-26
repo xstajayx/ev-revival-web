@@ -36,9 +36,12 @@
   const backToTop = document.querySelector('[data-back-top]');
 
   if (menuBtn && drawer) {
+    menuBtn.setAttribute('aria-expanded', 'false');
     menuBtn.addEventListener('click', () => {
       drawer.classList.add('open');
       drawer.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      closeBtn?.focus();
     });
   }
 
@@ -46,10 +49,31 @@
     if (!drawer) return;
     drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden', 'true');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+    menuBtn?.focus();
   };
 
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
   if (drawer) {
+    document.addEventListener('keydown', (event) => {
+      if (!drawer.classList.contains('open')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeDrawer();
+      }
+      if (event.key === 'Tab') {
+        const controls = [...drawer.querySelectorAll('button, a[href]')];
+        const first = controls[0];
+        const last = controls.at(-1);
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    });
     drawer.addEventListener('click', (e) => {
       if (e.target === drawer) closeDrawer();
     });
@@ -78,7 +102,7 @@
 
   if (backToTop) {
     backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     });
   }
 
