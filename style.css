@@ -294,7 +294,12 @@ footer {
   gap: 0.75rem;
   margin-bottom: 0.65rem;
 }
-.footer-links a { color: #18407f; }
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #18407f;
+}
 
 .back-to-top {
   position: fixed;
@@ -486,3 +491,16 @@ footer {
 
 /* Let long charger endpoint examples remain readable on narrow screens. */
 .code-pill { max-width: 100%; overflow-wrap: anywhere; white-space: normal; }
+
+.help-legal-nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: .5rem 1rem;
+  padding: 0;
+  list-style: none;
+}
+.help-legal-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
